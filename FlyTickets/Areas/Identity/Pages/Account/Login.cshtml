@@ -1,0 +1,57 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<h1 class="m-5">@ViewData["Title"]</h1>
+<div class="row m-5 p-3">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h4>Влезте в своя профил.</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label>Имейл</label>
+                    <input asp-for="Input.UserName" class="form-control" placeholder="Въведете имейл"/>
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Парола</label>
+                    <input asp-for="Input.Password" class="form-control" placeholder="Въведете парола"/>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label >Запомни ме
+                            <input asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Вход</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h4>Нямате профил? <a href="Register">Създайте го от тук</a></h4>
+            <hr />
+
+            <div>
+                <p>
+                    Създайте своя профил и направете менажирането на вашите пътувания много по-лесно.
+                </p>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

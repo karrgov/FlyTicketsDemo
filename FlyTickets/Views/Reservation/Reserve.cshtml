@@ -1,0 +1,35 @@
+﻿@model Reservation
+
+<section class="breadcrumb_area blog_banner_two">
+    <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+    <div class="container">
+        <div class="page-cover text-center">
+            <h2 class="page-cover-tittle f_48">Резервация</h2>
+        </div>
+    </div>
+</section>
+
+<div class="comment-form">
+    <form method="post" asp-controller="Reservation" asp-action="Reserve">
+        <div class="form-group form-inline">
+            <div class="form-group col-lg-6 col-md-6 name">
+                <input type="text" class="form-control" id="name" placeholder="Две имена" asp-for="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Две имена'">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 email">
+                <input type="email" class="form-control" id="email" placeholder="Имейл" asp-for="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Имейл'">
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="subject" placeholder="Телефон" asp-for="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Телефон'">
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" id="subject" placeholder="Места" asp-for="Seats" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Места'">
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" id="subject" placeholder="Багаж" asp-for="Laguage" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Багаж'">
+        </div>
+        <input asp-for="RouteId"  type="hidden" />
+        <p>Полет</p>
+        <button type="submit" class="primary-btn button_hover">Резервирай</button>
+    </form>
+</div>

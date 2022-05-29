@@ -1,0 +1,59 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Регистрация";
+}
+
+<h1 class="m-5">@ViewData["Title"]</h1>
+
+<div class="row m-5 p-3">
+    <div class="col-md-4">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h4>Създаване на акаунт.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label>Потребитерско име</label>
+                <input asp-for="Input.UserName" class="form-control" placeholder="Въведете username" />
+                <span asp-validation-for="Input.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Имейл</label>
+                <input asp-for="Input.Email" class="form-control" placeholder="Въведете имейл"/>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Парола</label>
+                <input asp-for="Input.Password" class="form-control" placeholder="Въведете парола"/>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Повтори парола</label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Въведете парола отново"/>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Регистрация</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h4>Вече имате профил. <a href="Login">Влезте от тук</a></h4>
+            <hr />
+
+            <div>
+                <p> 
+                    Най-добрата система за самолетни билети.
+                </p>
+                <p>
+                    FlyTickets. Beyond the sky.
+                </p>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

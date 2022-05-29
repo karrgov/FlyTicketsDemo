@@ -1,0 +1,46 @@
+﻿@model Route[]
+
+    <section class="banner_area blog_banner d_flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h4>Детайли от вашето търсене</h4>
+
+            </div>
+        </div>
+    </section>
+    <!--================Banner Area =================-->
+    <!--================Blog Categorie Area =================-->
+    <section class="blog_categorie_area">
+        <div class="container">
+            <div class="row">
+                @if (Model.Length != 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 m-5">
+                            <div class="categories_post">
+                                <img src="~/image/blog/cat-post/cat-post-3.jpg" alt="post">
+                                <div class="categories_details">
+                                    <div class="categories_text">
+                                        <a href="blog-details.html"><h5>@String.Format("{0:f}", item.DepartureTime)</h5></a>
+                                        <div class="border_line"></div>
+                                        <p>Цени от @item.Price</p>
+                                        <p>@item.DepartureCity - @item.ArivalCity</p>
+                                        <a class="btn btn-primary" href="/Home/FlightDetails/@item.Id">Детайли</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="col-sm-12 alert alert-warning" role="alert">
+                        Няма намерени резултати
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>

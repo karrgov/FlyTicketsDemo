@@ -1,0 +1,88 @@
+﻿@model Route;
+
+<section class="breadcrumb_area">
+    <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+    <div class="container">
+        <div class="page-cover text-center">
+            <h2 class="page-cover-tittle">Дeтайли за полет</h2>
+
+        </div>
+    </div>
+</section>
+<section class="about_history_area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form method="post" asp-action="FlightDetails" asp-controller="Admin">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Идентификационен номер</label>
+                        <input type="text" asp-for="Id" class="form-control" id="formGroupExampleInput" placeholder="София" disabled>
+                        <span asp-validation-for="DepartureCity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Град на излитане</label>
+                        <input type="text" asp-for="DepartureCity" class="form-control" id="formGroupExampleInput" placeholder="София">
+                        <span asp-validation-for="DepartureCity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Летище на излитане</label>
+                        <input type="text" asp-for="DepartureAirport" class="form-control" id="formGroupExampleInput2" placeholder="Летище София">
+                        <span asp-validation-for="DepartureAirport" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Терминал на излитане</label>
+                        <input type="text" asp-for="DepartureTerminal" class="form-control" id="formGroupExampleInput2" placeholder="Терминал 1">
+                        <span asp-validation-for="DepartureTerminal" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Дата на излитане</label>
+                        <input type="datetime" asp-for="DepartureTime" class="form-control" id="formGroupExampleInput2">
+                        <span asp-validation-for="DepartureTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Град на пристигане</label>
+                        <input type="text" asp-for="ArivalCity" class="form-control" id="formGroupExampleInput" placeholder="Истамбул">
+                        <span asp-validation-for="ArivalCity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Летище на пристигане</label>
+                        <input type="text" asp-for="ArivalAirport" class="form-control" id="formGroupExampleInput2" placeholder="Летище Ататюрк">
+                        <span asp-validation-for="ArivalAirport" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Терминал на пристигане</label>
+                        <input type="text" asp-for="ArivalTerminal" class="form-control" id="formGroupExampleInput2" placeholder="Терминал 1">
+                        <span asp-validation-for="ArivalTerminal" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Дата на пристигане</label>
+                        <input type="datetime" asp-for="ArrivalTime" class="form-control" id="formGroupExampleInput2">
+                        <span asp-validation-for="ArrivalTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Брой места на полета</label>
+                        <input type="number" asp-for="Seats" class="form-control" id="formGroupExampleInput2">
+                        <span asp-validation-for="Seats" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Цена на билета</label>
+                        <input type="number" asp-for="Price" class="form-control" id="formGroupExampleInput2" placeholder="249.99">
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Самолет номер</label>
+                        <input type="text" asp-for="Plane" class="form-control" id="formGroupExampleInput2" placeholder="BG23-123">
+                        <span asp-validation-for="Plane" class="text-danger"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                            <button class="btn btn-primary" type="submit">Редактирай</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

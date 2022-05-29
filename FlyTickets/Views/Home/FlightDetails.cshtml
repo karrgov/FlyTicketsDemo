@@ -1,0 +1,53 @@
+﻿@model Route
+
+<section class="breadcrumb_area blog_banner_two">
+    <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
+    <div class="container">
+        <div class="page-cover text-center">
+            <h2 class="page-cover-tittle f_48">Детайли за полет</h2>
+        
+        </div>
+    </div>
+</section>
+<!--================Breadcrumb Area =================-->
+<!--================Blog Area =================-->
+<section class="blog_area single-post-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 posts-list">
+                <div class="single-post row">
+                    <div class="col-12">
+                        <div class="feature-img">
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-3">
+                        <div class="blog_info text-right">
+              
+                            <ul class="blog_meta list_style">
+                                <li><a href="#">@Model.Seats местa<i class="lnr lnr-user"></i></a></li>
+                                <li><a href="#">полет @Model.Plane<i class="lnr lnr-calendar-full"></i></a></li>
+                                <li><a href="#">@Model.Price лв.<i class="lnr lnr-bubble"></i></a></li>
+                            </ul>
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 blog_details">
+                        <h2>@Model.DepartureCity - @Model.ArivalCity</h2>
+                        <p class="excert">
+                            Полетът излета от @Model.DepartureCity, летище @Model.DepartureAirport, терминал @Model.DepartureTerminal и пристига в @Model.ArivalCity, , летище @Model.ArivalAirport, терминал @Model.ArivalTerminal
+                        </p>
+                
+                    </div>
+                
+                </div>
+                <a class="btn btn-primary col-12"  href="/Reservation/Reserve/@Model.Id"> Резервирай</a>
+            </div>
+
+        </div>
+    </div>
+</section>
